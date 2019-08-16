@@ -1,18 +1,31 @@
+;;; sunburst-theme.el -- sunburst theme
+
+;; Sunburst color-theme by 'dngpng' (2007-09-11).
+;; Ported to deftheme by 'omgitsaheadcrab' (2019-08-16).
+
+;;; Commentary:
+;; Port of color-theme-sunburst by 'dngpng'.
+
 ;;; Code:
 
 (deftheme sunburst
-  "Color theme initially created by dngpng. Adapted for Emacs 24 by Will Farrington.")
+  "sunburst theme")
 
 (custom-theme-set-faces
  'sunburst
+
  '(default ((t (:background "#111" :foreground "#ddd"))))
+ '(mouse ((t (:foreground "sienna1"))))
+ '(cursor ((t (:background "yellow"))))
+ '(border ((t (:foreground "#111"))))
+ 
  '(blue ((t (:foreground "blue"))))
  '(bold ((t (:bold t))))
  '(bold-italic ((t (:bold t :slant italic))))
  '(border-glyph ((t (nil))))
  '(buffers-tab ((t (:background "#111" :foreground "#ddd"))))
  '(font-lock-builtin-face ((t (:foreground "#dd7b3b"))))
- '(font-lock-comment-face ((t (:foreground "#666" ))))
+ '(font-lock-comment-face ((t (:foreground "#888" ))))
  '(font-lock-constant-face ((t (:foreground "#99cf50"))))
  '(font-lock-doc-string-face ((t (:foreground "#9b859d"))))
  '(font-lock-function-name-face ((t (:foreground "#e9c062" :bold t))))
@@ -23,14 +36,12 @@
  '(font-lock-type-face ((t (:foreground "#c5af75"))))
  '(font-lock-variable-name-face ((t (:foreground "#3387cc"))))
  '(font-lock-warning-face ((t (:bold t :background "#420e09" :foreground "#eeeeee"))))
- ;; ERC
  '(erc-current-nick-face ((t (:foreground "#aeaeae"))))
  '(erc-default-face ((t (:foreground "#ddd"))))
  '(erc-keyword-face ((t (:foreground "#cf6a4c"))))
  '(erc-notice-face ((t (:foreground "#666"))))
  '(erc-timestamp-face ((t (:foreground "#65b042"))))
  '(erc-underline-face ((t (:foreground "c5af75"))))
- ;; NXML
  '(nxml-attribute-local-name-face ((t (:foreground "#3387cc"))))
  '(nxml-attribute-colon-face ((t (:foreground "#e28964"))))
  '(nxml-attribute-prefix-face ((t (:foreground "#cf6a4c"))))
@@ -47,19 +58,6 @@
  '(nxml-tag-delimiter-face ((t (:foreground "#cda869"))))
  '(nxml-tag-slash-face ((t (:foreground "#cda869"))))
  '(nxml-text-face ((t (:foreground "#ddd"))))
- ;; Jabber
- '(jabber-chat-prompt-local ((t (:foreground "#65b042"))))
- '(jabber-chat-prompt-foreign ((t(:foreground "#3387cc"))))
- '(jabber-roster-user-xa ((t (:foreground "#e28964"))))
- '(jabber-roster-user-online ((t (:foreground "#3387cc"))))
- '(jabber-roster-user-away ((t (:foreground "#9b859d"))))
- ;; Magit
- '(magit-log-sha1 ((t (:foreground "#cf6a4c"))))
- '(magit-log-head-label-local ((t (:foreground "#3387cc"))))
- '(magit-log-head-label-remote ((t (:foreground "#65b042"))))
- '(magit-branch ((t (:foreground "#e9c062"))))
- '(magit-section-title ((t (:foreground "#9b859d"))))
- '(magit-item-highlight ((t (:background "#1f1f1f"))))
  '(gui-element ((t (:background "#0e2231" :foreground "black"))))
  '(highlight ((t (:bold t :slant italic))))
  '(highline-face ((t (:background "#4a410d"))))
@@ -69,14 +67,10 @@
  '(mode-line ((t (:background "#e6e5e4" :foreground "black"))))
  '(primary-selection ((t (:background "#222"))))
  '(region ((t (:background "#4a410d"))))
+ '(org-list-dt ((t (:foreground "#65b042"))))
  '(text-cursor ((t (:background "yellow" :foreground "black"))))
- '(underline ((nil (:underline nil))))
-)
+ '(underline ((nil (:underline nil)))))
 
 (provide-theme 'sunburst)
 
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
-
-;;; sunburst-theme.el  ends here
+;;; sunburst-theme.el ends here
